@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head >
+
+    <link rel='stylesheet' href='/static/bootstrap/css/bootstrap.min.css' media='screen'>
+    <link rel='stylesheet' href='/static/css/style.css' media='screen'>
+
+</head>
+<body>
+    <div id='menubar'> </div>
+
+    <div class="container">
+        <div id='mainContent' class='row'>
+            <div class='offset4 span4'>
+                <form method='post' action='/linklist/user_login'>
+                {% csrf_token %}
+                    <fieldset>
+                    <legend>User login</legend>
+                    <label>Username</label>
+                    <input id='inputUsername' name='username' type="text" class='span3 offset2' placeholder='john'/>
+                    <label>Password</label>
+                    <input id='inputPassword' name='password' type='password' class='span3'/> 
+                    </br>
+                    <a href='/linklist/signup'>Signup</a>
+                    </br>
+                    </br>
+                    <input type='submit' class='btn btn-primary'/>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/linklist/main.js"></script>
+    <script src='/static/bootstrap/js/bootstrap.min.js'></script>
+</body>
+</html>

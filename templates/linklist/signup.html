@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head >
+
+    <link rel='stylesheet' href='/static/bootstrap/css/bootstrap.min.css' media='screen'>
+    <link rel='stylesheet' href='/static/css/linklist/signup.css' media='screen'>
+
+</head>
+<body>
+    <div id='menubar'> </div>
+
+    <div class="container">
+        <div id='mainContent' class='row'>
+            <div class='alert' >
+                <button type='button' class='close' data-dismiss='alert'>&times</button>
+            </div>
+            <div class='offset4 span4'>
+                <form method='post' action='adduser'>
+                {% csrf_token %}
+                    <fieldset>
+                    <legend>Signup</legend>
+                    <div class='input-append'>                    
+                        <label for='inputUsername'>Username</label>
+                        <input id='inputUsername' name='username' type='text' placeholder='Username'/>
+                        <button id='btnCheck' type='button' class='btn'>Check</button>
+                    </div>
+
+                    <label for='inputPassword'>Password</label>
+                    <input id='inputPassword' name='password' type='text' placeholder='password'/>
+                    <br/>
+
+                    <label for='inputConfirmPassword'>Confirm Password</label>
+                    <input id='inputConfirmPassword' type='text' placeholder='password'/>
+                    <br/>
+
+                    <label for='inputEmail'>E-mail</label>
+                    <input id='inputEmail' name='email' type='text' placeholder='E-mail'/>
+                    <br/>
+                    <br/>
+                    <button id='btnValidate' type='button' class='btn btn-primary'/>Validate</button>
+                    <button id='btnSubmit' type='submit' class='btn btn-success'/>Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/linklist/django_csrf.js"></script>
+    <script src="/static/js/linklist/main.js"></script>
+    <script src="/static/js/linklist/signup.js"></script>
+    <script src='/static/bootstrap/js/bootstrap.min.js'></script>
+</body>

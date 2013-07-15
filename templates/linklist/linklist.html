@@ -1,0 +1,31 @@
+<table id='tblLinkpost' class='table table-striped table-hover'>
+    <tr>
+        <th>
+           Link Title  <small><i>{% if query%} (Seraching for: {{query}}) {% endif %}</i></small>
+        </th>
+        <th>
+           URL
+        </th>
+        <th>
+        </th>
+    </tr>
+{% for linkpost in linkposts %}
+    <tr>
+        <td>
+            <div class='span5'>
+                {{linkpost.title}}
+            <div>
+        </td>
+        <td>
+            <div class='span1'>
+                <a href="{{linkpost.url}}"><i class='icon-share-alt'></i></a>
+            <div>
+        </td>
+        <td>
+            <div class='span1'>
+                <button class='close' data-linkpost_id="{{linkpost.id}}">&times</button>
+            <div>
+        </td>
+    </tr>
+{% endfor %}
+</table>
